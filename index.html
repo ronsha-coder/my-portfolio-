@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Ensure correct file path -->
+</head>
+<body>
+    <!-- Sidebar and Hamburger Menu -->
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+    <div class="sidebar">
+        <nav>
+            <a href="#about">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#languages">Languages</a>
+            <a href="#skills">Skills</a>
+            <a href="#interests">Interests</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="profile-container">
+            <img src="images/background.jpg" alt="Your Photo" class="profile-pic">
+            <h1>SHARON NDUKU</h1>
+            <button id="darkModeToggle">🌙 Dark Mode</button>
+        </div>
+
+        <div class="welcome-box">
+            Welcome to my portfolio! I am an aspiring Software Developer, currently learning to create websites, web platforms, and mobile applications for iOS and Android. I am passionate about developing innovative and user-friendly digital experiences, and I'm excited to build impactful solutions in the future.
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I am an aspiring software developer passionate about creating mobile applications for iOS and Android, as well as developing websites. I’m currently learning web development, and my goal is to build apps that positively impact users’ lives.</p>
+        <a href="file/my_cv.pdf" target="_blank" class="btn">View My CV</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>What I Do</h2>
+        <p>Hi! I'm Sharon Nduku, an aspiring software developer passionate about creating mobile applications for iOS and Android, as well as building responsive websites. I’m currently learning web development and mobile app development, and I'm excited to explore innovative solutions to improve user experiences. My goal is to continue growing in this field and contribute to building impactful digital solutions.</p>
+    </section>
+
+    <!-- Programming Languages Section -->
+    <section id="languages">
+        <h2>Programming Languages I Know</h2>
+        <ul>
+            <li><i class="fab fa-html5"></i> HTML</li>
+            <li><i class="fab fa-css3-alt"></i> CSS</li>
+            <li><i class="fab fa-python"></i> Python</li>
+        </ul>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li><i class="fas fa-laptop"></i> Computer Literacy</li>
+            <li><i class="fas fa-bullhorn"></i> Digital Marketing</li>
+            <li><i class="fas fa-robot"></i> Artificial Intelligence</li>
+            <li><i class="fas fa-shield-alt"></i> Cyber Security</li>
+            <li><i class="fas fa-paint-brush"></i> Design Leadership</li>
+            <li><i class="fab fa-google"></i> Google Workspace</li>
+            <li><i class="fas fa-book-open"></i> Digital Literacy and Ethics</li>
+            <li><i class="fas fa-drafting-compass"></i> Design and Graphics</li>
+        </ul>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests">
+        <h2>My Interests</h2>
+        <ul>
+            <li><i class="fas fa-robot"></i> Artificial Intelligence</li>
+            <li><i class="fas fa-laptop"></i> Technology</li>
+            <li><i class="fas fa-book-open"></i> Learning New Skills</li>
+            <li><i class="fas fa-heart"></i> Mental Health Awareness</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li>
+                <span class="project-title">Landing Page</span>
+                <span class="progress-text">(Still in progress)</span>
+                <p>A simple landing page built using HTML and CSS.</p>
+            </li>
+            <li>
+                <span class="project-title">Resume Website</span>
+                <span class="progress-text">(Still in progress)</span>
+                <p>An online resume showcasing my skills and experiences.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or just want to say hello, feel free to reach out!</p>
+        <p>Email: <a href="mailto:ndukusharon19@gmail.com">Email</a></p>
+        <p>Phone: <a href="tel:+254740857628">Call or Text</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sharonnduku" target="_blank">Visit my LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/sharonnduku" target="_blank">Visit my GitHub</a></p>
+
+        <!-- Contact Form -->
+        <form action="your-form-handling-url" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 Sharon Nduku. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Dark Mode and Sidebar Toggle -->
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                darkModeToggle.textContent = '🌙 Light Mode';
+            } else {
+                darkModeToggle.textContent = '🌙 Dark Mode';
+            }
+        });
+
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
