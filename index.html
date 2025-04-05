@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> <!-- Ensure correct file path -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Sidebar and Hamburger Menu -->
@@ -29,31 +27,31 @@
     <!-- Header Section -->
     <header>
         <div class="profile-container">
-            <img src="images/background.jpg" alt="Your Photo" class="profile-pic">
-            <h1>SHARON NDUKU</h1>
+            <img src="images/background.jpg" alt="Your Photo" class="profile-pic fade-in">
+            <h1 class="fade-in">SHARON NDUKU</h1>
             <button id="darkModeToggle">🌙 Dark Mode</button>
         </div>
 
-        <div class="welcome-box">
+        <div class="welcome-box fade-in">
             Welcome to my portfolio! I am an aspiring Software Developer, currently learning to create websites, web platforms, and mobile applications for iOS and Android. I am passionate about developing innovative and user-friendly digital experiences, and I'm excited to build impactful solutions in the future.
         </div>
     </header>
 
     <!-- About Me Section -->
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <p>Hi, I am an aspiring software developer passionate about creating mobile applications for iOS and Android, as well as developing websites. I’m currently learning web development, and my goal is to build apps that positively impact users’ lives.</p>
         <a href="file/my_cv.pdf" target="_blank" class="btn">View My CV</a>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="fade-in">
         <h2>What I Do</h2>
         <p>Hi! I'm Sharon Nduku, an aspiring software developer passionate about creating mobile applications for iOS and Android, as well as building responsive websites. I’m currently learning web development and mobile app development, and I'm excited to explore innovative solutions to improve user experiences. My goal is to continue growing in this field and contribute to building impactful digital solutions.</p>
     </section>
 
     <!-- Programming Languages Section -->
-    <section id="languages">
+    <section id="languages" class="fade-in">
         <h2>Programming Languages I Know</h2>
         <ul>
             <li><i class="fab fa-html5"></i> HTML</li>
@@ -63,7 +61,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>My Skills</h2>
         <ul>
             <li><i class="fas fa-laptop"></i> Computer Literacy</li>
@@ -75,26 +73,44 @@
             <li><i class="fas fa-book-open"></i> Digital Literacy and Ethics</li>
             <li><i class="fas fa-drafting-compass"></i> Design and Graphics</li>
         </ul>
+
+        <!-- Progress bars for skills -->
+        <h3>Progress</h3>
+        <div class="skill-bar">
+            <label for="html">HTML</label>
+            <progress id="html" value="70" max="100"></progress>
+        </div>
+        <div class="skill-bar">
+            <label for="css">CSS</label>
+            <progress id="css" value="65" max="100"></progress>
+        </div>
+        <div class="skill-bar">
+            <label for="python">Python</label>
+            <progress id="python" value="50" max="100"></progress>
+        </div>
     </section>
-    <section id="interests">
-  <h2>Interests</h2>
-  <div class="interests-grid">
-    <div><i class="fas fa-code"></i> Coding</div>
-    <div><i class="fas fa-brain"></i> Learning Programming Languages</div>
-    <div><i class="fas fa-chart-line"></i> Data Science</div>
-    <div><i class="fas fa-cloud"></i> Cloud Computing</div>
-    <div><i class="fas fa-laptop-code"></i> Software Engineering</div>
-    <div><i class="fas fa-lightbulb"></i> Technology & Innovation</div>
-    <div><i class="fas fa-robot"></i> Exploring AI</div>
-    <div><i class="fas fa-mobile-alt"></i> Web & Mobile App Dev</div>
-    <div><i class="fas fa-heart"></i> Mental Health Awareness</div>
-    <div><i class="fas fa-pencil-ruler"></i> Design & UX</div>
-    <div><i class="fas fa-users"></i> Leadership & Mentoring</div>
-    <div><i class="fas fa-puzzle-piece"></i> Creative Problem Solving</div>
-  </div>
+
+    <!-- Interests Section -->
+    <section id="interests" class="fade-in">
+        <h2>Interests</h2>
+        <div class="interests-grid">
+            <div><i class="fas fa-code"></i> Coding</div>
+            <div><i class="fas fa-brain"></i> Learning Programming Languages</div>
+            <div><i class="fas fa-chart-line"></i> Data Science</div>
+            <div><i class="fas fa-cloud"></i> Cloud Computing</div>
+            <div><i class="fas fa-laptop-code"></i> Software Engineering</div>
+            <div><i class="fas fa-lightbulb"></i> Technology & Innovation</div>
+            <div><i class="fas fa-robot"></i> Exploring AI</div>
+            <div><i class="fas fa-mobile-alt"></i> Web & Mobile App Dev</div>
+            <div><i class="fas fa-heart"></i> Mental Health Awareness</div>
+            <div><i class="fas fa-pencil-ruler"></i> Design & UX</div>
+            <div><i class="fas fa-users"></i> Leadership & Mentoring</div>
+            <div><i class="fas fa-puzzle-piece"></i> Creative Problem Solving</div>
+        </div>
     </section>
-<!-- Projects Section -->
-    <section id="projects">
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
         <h2>My Projects</h2>
         <ul>
             <li>
@@ -111,14 +127,14 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
         <p>If you'd like to collaborate or just want to say hello, feel free to reach out!</p>
         <p>Email: <a href="mailto:ndukusharon19@gmail.com">Email</a></p>
         <p>Phone: <a href="tel:+254740857628">Call or Text</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/sharon-nduku-a70949284" target="_blank">Visit my LinkedIn</a></p>
-<p>GitHub: <a href="https://github.com/ronsha-coder" target="_blank">Visit my GitHub</a></p>
-        /a></p>
+        <p>GitHub: <a href="https://github.com/ronsha-coder" target="_blank">Visit my GitHub</a></p>
+
         <!-- Contact Form -->
         <form action="your-form-handling-url" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
@@ -129,7 +145,7 @@
     </section>
 
     <!-- Footer Section -->
-    <footer>
+    <footer class="fade-in">
         <p>© 2025 Sharon Nduku. All Rights Reserved.</p>
     </footer>
 
@@ -154,3 +170,4 @@
     </script>
 </body>
 </html>
+
