@@ -73,6 +73,7 @@ header .welcome-box {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 /* Footer Container */
 footer {
     text-align: center;
@@ -96,6 +97,7 @@ footer {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 /* Hamburger Toggle (Adjusted) */
 .hamburger {
     font-size: 40px; /* Increased size */
@@ -105,8 +107,25 @@ footer {
     right: 20px; /* Move to the right */
     top: 20px;
     z-index: 10;
-    }
-/* Sidebar Navigation Links (Adjusted) */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
 .sidebar nav a {
     display: block;
     color: #fff;
@@ -123,70 +142,65 @@ footer {
     background-color: #333; /* Darker shade when hovered */
 }
 
-/* Sidebar Styles */
-
-/* General Container Styles for Sections */
+/* Section Styles (Containers with Background Color) */
 section {
     padding: 2rem;
     margin: 2rem auto;
     width: 80%;
     max-width: 1000px;
-    background-color: rgb(240, 143, 240); /* Updated background color for sections */
-    border-radius: 8px; /* Rounded corners for container */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    background-color: rgb(240, 143, 240);  /* Updated to requested color */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* About Me Section Container */
-#about {
-    background-color: rgb(240, 143, 240); /* Updated background color for About */
+section h2 {
+    margin-bottom: 1rem;
 }
 
-/* What I Do Section Container */
-#services {
-    background-color: rgb(240, 143, 240); /* Updated background color for Services */
+section ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Programming Languages Section Container */
-#languages {
-    background-color: rgb(240, 143, 240); /* Updated background color for Languages */
+section ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
 }
 
-/* Skills Section Container */
-#skills {
-    background-color: rgb(240, 143, 240); /* Updated background color for Skills */
+section ul li i {
+    margin-right: 15px;
+    font-size: 1.5rem;
 }
 
-/* Interests Section - Two Column Layout */
-#interests {
-    background-color: rgb(240, 143, 240); /* Updated background color for Interests */
+/* Skills Section */
+#skills ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
+#skills ul li {
+    font-size: 1.1rem;
+}
+
+#skills ul li i {
+    color: #4CAF50;
+}
+
+/* Interests Section */
 #interests ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for Interests */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
 #interests ul li {
     font-size: 1.1rem;
-    background-color: #fff; /* White background for each item */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners for each item */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Slight shadow for each item */
 }
 
 #interests ul li i {
-    color: #4CAF50; /* Green color for icons */
-}
-
-/* Projects Section Container */
-#projects {
-    background-color: rgb(240, 143, 240); /* Updated background color for Projects */
-}
-
-/* Contact Form Container */
-#contact {
-    background-color: rgb(240, 143, 240); /* Updated background color for Contact */
+    color: #4CAF50;
 }
 
 /* Contact Form Styles */
@@ -213,4 +227,79 @@ form button {
 
 form button:hover {
     background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333333;
+    color: rgb(40, 221, 16);
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .profile-pic {
+        width: 150px;  /* Reduced size for smaller screens */
+        height: 150px;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    #skills ul,
+    #interests ul {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .hamburger {
+        font-size: 40px;
+    }
+}
+
+/* Hover Effects */
+section ul li:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+/* Interests Grid */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.interests-grid div {
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.interests-grid i {
+    color: #4CAF50;
+    font-size: 18px;
+}
+
+section ul li i:hover {
+    color: #333;
 }
